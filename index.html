@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define a codificação de caracteres e a responsividade -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email with EmailJS</title>
+    
+    <!-- Link para o arquivo CSS onde os estilos estão definidos -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Inclui o script do EmailJS para permitir o envio de emails -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    
+    <!-- Inicializa o EmailJS com a chave pública que você obtém ao criar uma conta -->
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("PqlkXlL0wO7qscJPH"); // Substitua "YOUR_PUBLIC_KEY" pela sua chave pública do EmailJS
+        })();
+    </script>
+</head>
+<body>
+    <!-- Container do formulário de contato -->
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        
+        <!-- Formulário que será submetido para enviar o e-mail -->
+        <form id="contact-form">
+            <!-- Campo de texto para o nome do usuário -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" required>
+
+            <!-- Campo de entrada para o email do usuário -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user_email" required>
+
+            <!-- Campo de texto onde o usuário insere sua mensagem -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <!-- Botão para enviar o formulário -->
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Parágrafo onde a resposta (sucesso ou erro) será exibida -->
+        <p id="response"></p>
+    </div>
+
+    <!-- Script para gerenciar o envio do formulário -->
+    <script>
+        const form = document.getElementById('contact-form');
+        
+        // Adiciona um listener ao formulário que detecta o envio
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário de recarregar a página
+            
+            // Envia o formulário usando o EmailJS, passando o ID de serviço e template configurado
+            emailjs.sendForm('service_5qegyyi', 'template_8n9ge8g', this)
+                .then(function(response) {
+                    // Se o envio for bem-sucedido, exibe uma mensagem de sucesso
+                    document.getElementById('response').innerText = 'Email sent successfully!';
+                    form.reset(); // Limpa o formulário
+                }, function(error) {
+                    // Se houver falha no envio, exibe uma mensagem de erro
+                    document.getElementById('response').innerText = 'Failed to send email. Please try again.';
+                });
+        });
+    </script>
+</body>
+</html>

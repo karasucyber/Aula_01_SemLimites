@@ -1,0 +1,75 @@
+/* Define o estilo global para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte para o texto */
+    background-color: #f2f2f2; /* Cor de fundo da página */
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+}
+
+/* Estiliza o container do formulário */
+.form-container {
+    width: 100%; /* Largura total da página */
+    max-width: 400px; /* Largura máxima de 400px */
+    margin: 50px auto; /* Centraliza o container na página */
+    background-color: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra ao redor do container */
+}
+
+/* Estiliza o título do formulário */
+h2 {
+    text-align: center; /* Centraliza o texto */
+    color: #333; /* Cor do texto */
+}
+
+/* Define o estilo básico do formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Organiza os campos em uma coluna vertical */
+}
+
+/* Estilo dos rótulos (labels) */
+label {
+    margin-top: 10px; /* Espaço acima do rótulo */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo dos campos de entrada de texto e email */
+input, textarea {
+    padding: 10px; /* Espaçamento interno nos campos */
+    margin-top: 5px; /* Espaço entre o rótulo e o campo */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 5px; /* Arredonda os cantos */
+    width: 100%; /* Largura total dentro do container */
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura */
+}
+
+/* Define a altura do textarea */
+textarea {
+    height: 100px; /* Altura fixa */
+    resize: none; /* Impede o redimensionamento manual do campo */
+}
+
+/* Estilo do botão de envio */
+button {
+    margin-top: 20px; /* Espaço acima do botão */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #007BFF; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilo para quando o botão é passado o mouse */
+button:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilo da mensagem de resposta */
+#response {
+    margin-top: 10px; /* Espaço acima da mensagem */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho da fonte da mensagem */
+}
