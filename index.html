@@ -28,7 +28,7 @@
         <form id="contact-form">
             <!-- Campo de texto para o nome do usuário -->
             <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" required>
+            <input type="text" id="name" name="name" required>
 
             <!-- Campo de entrada para o email do usuário -->
             <label for="email">Email:</label>
@@ -52,19 +52,27 @@
         
         // Adiciona um listener ao formulário que detecta o envio
         form.addEventListener('submit', function(event) {
+
+
+            
             event.preventDefault(); // Previne o comportamento padrão do formulário de recarregar a página
             
             // Envia o formulário usando o EmailJS, passando o ID de serviço e template configurado
+
             emailjs.sendForm('service_5qegyyi', 'template_8n9ge8g', this)
+
                 .then(function(response) {
                     // Se o envio for bem-sucedido, exibe uma mensagem de sucesso
                     document.getElementById('response').innerText = 'Email sent successfully!';
                     form.reset(); // Limpa o formulário
+
                 }, function(error) {
                     // Se houver falha no envio, exibe uma mensagem de erro
                     document.getElementById('response').innerText = 'Failed to send email. Please try again.';
                 });
         });
+
+
     </script>
 </body>
 </html>
