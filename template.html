@@ -1,0 +1,40 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        color: #333;
+    }
+    .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: auto;
+    }
+    h2 {
+        color: #007BFF;
+    }
+    .message {
+        padding: 12px;
+        border-left: 4px solid #d0d0d0;
+        font-style: italic;
+        background-color: #f9f9f9;
+        margin: 10px 0;
+    }
+    .footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #888;
+    }
+</style>
+<div class="container">
+<h2>Hello Kau&atilde;,</h2>
+<p>You have received a new message from <strong>{{name}}</strong>:</p>
+<div class="message"><strong>Name:{{user_name}}</strong></div>
+<div class="message"><strong>Email:{{user_email}}</strong></div>
+<div class="message"><strong>Message:</strong>{{message}}</div>
+<p>We hope this message finds you well!</p>
+<div class="footer">Best regards,<br><strong>Your Team at EmailJS</strong></div>
+</div>

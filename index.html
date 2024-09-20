@@ -53,8 +53,6 @@
         // Adiciona um listener ao formulário que detecta o envio
         form.addEventListener('submit', function(event) {
 
-
-            
             event.preventDefault(); // Previne o comportamento padrão do formulário de recarregar a página
             
             // Envia o formulário usando o EmailJS, passando o ID de serviço e template configurado
@@ -71,8 +69,7 @@
                     document.getElementById('response').innerText = 'Failed to send email. Please try again.';
                 });
         });
-
-
+        
     </script>
 </body>
 </html>
